@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Game</title>
+    <style>
+        body{
+            background-color: yellow;
+        }
+        p{
+            background-color: white;
+        }
+        div {
+            display:inline-block;
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Color Game</h1>
+    <hr>
+    <h4>Directions: Click the start button to change colors of the containers. 
+        You will be given an rgb value and you must guess which container color 
+        matches it by clicking on that container </h4>
+    <p id="colors"></p>
+    <p id="container">
+        <div id="colOne" onclick="checkWin('colOne')">1</div>
+        <div id="colTwo" onclick="checkWin('colTwo')">2</div>
+        <div id="colThree" onclick="checkWin('colThree')">3</div>
+    </p>
+
+    <!-- <p id="colorstwo" >hi</p> -->
+    <br>
+    <br>
+    <button type="button" onclick="changeColors()">Start</button>
+    <!-- <button type="button" onclick="testGlobal()">hi</button> -->
+    <script src = 'color.js'></script>
+</body>
+</html>
