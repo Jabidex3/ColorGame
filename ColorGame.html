@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Game</title>
+	<link href='https://fonts.googleapis.com/css?family=Shojumaru' rel='stylesheet'>
+    <style>
+        body{
+		 background-image: url("bg.png");
+
+            background-color: 	 #47d147;
+			font-family: 'Shojumaru';
+        }
+        p{
+            background-color: white;
+			text-align:center;
+			width: 500px;
+			margin-left:32%;
+        }
+		
+		h1{
+		font-family: 'Shojumaru';
+		font-size: 30px;
+		text-align:center;
+		}
+		h4{
+		text-align:center;
+		}
+		.row {
+		  display: flex;
+		  flex-wrap: wrap;
+
+		  justify-content: center;
+		  align-items: center;
+		}
+		.row > div {
+		  background-color: #f1f1f1;
+		  width: 200px;
+		  height: 200px;
+		  border: 2px solid black;
+		  border-radius: 25px;
+		  margin: 10px;
+		  text-align: center;
+		  line-height:200px;
+		  font-size: 30px;
+		}
+		
+		.row > button{
+		margin: 10px;
+		}
+
+
+    </style>
+</head>
+<body>
+    <h1>RGB Color Game</h1>
+    <hr>
+    <h4>Can You Match The Given RGB Value With It's Corresponding Container? Click The Start Button To Find Out!</h4>
+	<div class="row"> 
+		<button type="button" onclick="changeColors()">Start</button>
+		<button id="currDiff" type="button" onclick="difficulty()">Hard Mode</button>
+    </div>
+	<p id="colors"></p>
+    
+	<div class="row"> 
+        <div id="colOne" onclick="checkWin('colOne')"></div>
+        <div id="colTwo" onclick="checkWin('colTwo')"></div>
+        <div id="colThree" onclick="checkWin('colThree')"></div>
+    </div>
+
+	<div id ="hard" class="row" style="display:none"> 
+        <div id="colFour" onclick="checkWin('colFour')"></div>
+        <div id="colFive" onclick="checkWin('colFive')"></div>
+        <div id="colSix" onclick="checkWin('colSix')"></div>
+    </div>
+    
+    <script src = 'color.js'></script>
+</body>
+</html>
